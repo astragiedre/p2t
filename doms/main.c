@@ -2,9 +2,7 @@
 
 // Convert temperature to Kelvin
 int toKelvin(int celcius) {
-	int kelvin=0;
-	kelvin = celcius + 273;
-	return kelvin;
+	return celcius + 273;
 }
 
 int main() {
