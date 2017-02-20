@@ -1,0 +1,119 @@
+--------------------------------------------------------------------------------
+    LAB 02                                       Advanced Command Line Usage    
+--------------------------------------------------------------------------------
+
+    Answer all questions for Lab02 in this file.
+
+
+--------------------------------------------------------------------------------
+    QUESTIONS - Managing Processes
+--------------------------------------------------------------------------------
+
+------------------
+    QUESTION 1
+------------------
+
+A) load average: 3.90, 3.78, 3.39
+
+
+B) 2031 total
+
+
+C) ps -efl | grep u2203724A
+
+------------------
+    QUESTION 2 
+------------------
+using a command <process> &  , for instance, emacs & You can send a process to the background. Sending a process to the
+background allows it to run without interfering with the bash prompt. Jobs will now show the process as Running.
+
+------------------
+    QUESTION 3 
+------------------
+
+ps -r | wc -l
+--------------------------------------------------------------------------------
+    QUESTIONS - Variables and the Path Variable
+--------------------------------------------------------------------------------
+
+------------------
+    QUESTION 4 
+------------------
+If a directory is added to the path, a command which is malicious can be executed in every other directory on the computer(not just your own user folder). 
+
+    
+------------------
+    QUESTION 5 
+------------------
+
+A=Apple
+B=Ball
+C=Cat
+
+A)  Apple
+
+B)  AppleBall
+
+C)  blank line since a variable 'AB' is not defined
+
+D)  blank line
+
+E)  Catat (look for variable C and add 'at' string at the end of the output)
+
+F)  “Apple Ball Cat”
+
+G)  $A $B $C
+
+H)  $A
+
+
+--------------------------------------------------------------------------------
+    QUESTIONS - Pipes and Redirection 
+--------------------------------------------------------------------------------
+    
+------------------
+    QUESTION 6 
+------------------
+Uniq filters out adjacent matching lines from input file and writes the filtered output to another output file. Uniq does not detect repeated lines unless they are adjacent; hence, it is important to sort the input in the beginning.  
+    
+------------------
+    QUESTION 7 
+------------------
+
+A)	The grep command is used when searching the text or file for lines containing a certain matching pattern/string. Grep displays the matching lines.  
+B)  from extras  
+cat Bash-Beginners-Guide.txt | grep 'Chapter'
+
+
+    
+------------------
+    QUESTION 8 
+------------------
+
+   sort ~/.bash_history | uniq -c | sort -n | tail > commands.txt
+   
+   OUTPUT IN commands.txt file:
+   
+      5 touch lala
+      7 gcc -o testing testing.c
+      7 jobs
+      8 cd lab1
+     14 pwd
+     15 ./something
+     16 cd
+     17 gcc -o newfile newfile.c
+     21 gcc -o something something.c
+     44 ls
+
+Sorts lines in ~/.bash_history , then merges adjacent matching lines while also writing the number of occurences. Then sort -n will compare that number of occurences and sort from lowest to biggest
+-------------------
+    QUESTION 9 
+-------------------
+>' - redirects the O/P to file by creating it and if the file already exists it takes the liberty to overwrite it without user intimation.
+
+'>>' - redirects the output to a file by creating it and if the file already exists, it is appended.
+   
+
+--------------------------------------------------------------------------------
+    FINISHED LAB 02                                             MARKS: XX/XX    
+--------------------------------------------------------------------------------
